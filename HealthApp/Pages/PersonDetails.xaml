@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthApp.PersonDetails"
+             Title="Patient Summary">
+    <ScrollView BackgroundColor="{StaticResource Secondary}"   Padding="10">
+
+                     <Grid RowSpacing="5" VerticalOptions="StartAndExpand" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                       <!-- Person Details -->
+                     
+                       <VerticalStackLayout Grid.Row="0" Padding="10" HorizontalOptions="Fill">
+                            <Label Text="{Binding PatientName}" FontSize="20" Padding="0,10,0,10" FontAttributes="Bold" TextColor="Black" />
+                            <!-- Separator Line -->
+                           <BoxView Color="LightGray" HorizontalOptions="Fill" HeightRequest="1"  />
+    
+                           <Label Text="{Binding PatientCity}" FontSize="15" Padding="0,0,0,10"  TextColor="Black" />
+
+                            <Label FontSize="15" Text="{Binding PtnAge}" TextColor="Black" />
+                
+                            <Label FontSize="15" Text="{Binding PtnBlood}" TextColor="Black"/>
+                           
+
+                        </VerticalStackLayout>
+
+                          <!-- Medical History -->
+
+                     <Label Text="Medical History" Grid.Row="1" FontSize="20" Padding="10" FontAttributes="Bold" TextColor="Black" />
+                              
+                         <Frame CornerRadius="15" Grid.Row="2" Padding="15" BackgroundColor="white">
+                            <Grid x:Name="HistoryGrid" RowSpacing="5">
+                            </Grid>
+                          </Frame>
+
+
+                         <!-- Recent Visits -->
+                
+                    <Label Text="Recent Visits" Grid.Row="3" Padding="10" FontSize="20"   FontAttributes="Bold" TextColor="Black" />
+
+                    <Frame CornerRadius="15" Padding="15" Grid.Row="4"  >
+                         <Grid x:Name="RecentVisitsGrid" RowSpacing="5">
+                           
+                         </Grid>
+                    </Frame>
+
+                       
+                    </Grid>
+                     </ScrollView>
+</ContentPage>

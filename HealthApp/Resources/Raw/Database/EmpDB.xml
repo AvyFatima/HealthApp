@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<EmployeeDatabase xmlns:xsi="http://w3.org" xmlns:xsd="http://w3.org">
+  <Employees>
+    <Employee Id="1">
+      <Name>Alice Smith</Name>
+      <Role>Doctor</Role>
+      <Email>smith@healthyworld.com</Email>
+      <Username>admin</Username>
+      <password>password</password>
+      <JoiningDate>15/09/2026 14:00:00</JoiningDate>
+    </Employee>
+    <Employee Id="2">
+      <Name>Bob Jones</Name>
+      <Role>Admin</Role>
+      <Email>jones@healthyworld.com</Email>
+      <Username>admin</Username>
+      <password>123</password>
+      <JoiningDate>01/09/2026 09:00:00</JoiningDate>
+    </Employee>
+  </Employees>
+</EmployeeDatabase>

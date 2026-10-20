@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<AppointmentDatabase xmlns:xsi="http://w3.org" xmlns:xsd="http://w3.org">
+  <Appointments>
+    <Appointment Id="1">
+      <AptnDetails>Follow-up</AptnDetails>
+      <AptnPatientId>21</AptnPatientId>
+      <AptnDate>19/09/2026 10:00:00</AptnDate>
+       <AssignedToId>1</AssignedToId>
+       <isDeleted>0</isDeleted>
+       <UpdatedOn></UpdatedOn>
+       <OtherDetails></OtherDetails>
+       <Notes>
+           <Note>General Physician exam</Note>
+           <Note>Blood Test Scheduled</Note>
+       </Notes>
+       <Reminders>
+           <Reminder>Fasting required below the test</Reminder>
+       </Reminders>
+    </Appointment>
+    <Appointment Id="2">
+      <AptnDetails>Checkup</AptnDetails>
+      <AptnPatientId>11</AptnPatientId>
+      <AptnDate>19/09/2026 11:30:00</AptnDate>
+       <AssignedToId>1</AssignedToId>
+       <isDeleted>0</isDeleted>
+       <UpdatedOn></UpdatedOn>
+       <OtherDetails></OtherDetails>
+    </Appointment>
+     <Appointment Id="3">
+      <AptnDetails>Annual Checkup</AptnDetails>
+     <AptnPatientId>3</AptnPatientId>
+      <AptnDate>20/09/2026 10:00:00</AptnDate>
+       <AssignedToId>1</AssignedToId>
+       <isDeleted>0</isDeleted>
+       <UpdatedOn></UpdatedOn>
+       <OtherDetails></OtherDetails>
+       <Notes>
+           <Note>General Physician exam</Note>
+           <Note>Blood Test Scheduled</Note>
+       </Notes>
+       <Reminders>
+           <Reminder>Fasting required below the test</Reminder>
+       </Reminders>
+    </Appointment>
+  </Appointments>
+</AppointmentDatabase>

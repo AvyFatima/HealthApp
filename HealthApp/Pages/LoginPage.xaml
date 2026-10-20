@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthApp.LoginPage"
+             Shell.NavBarIsVisible="False"
+             >
+   
+     
+    <ScrollView BackgroundColor="{StaticResource Secondary}">
+        <VerticalStackLayout  Spacing="25"   VerticalOptions="Center" Padding="10" >
+
+            <!-- App Icon -->
+            <Image Source="hearticon.png"
+                   HeightRequest="200"
+                   HorizontalOptions="Center" />
+
+            <!-- Welcome Text -->
+            <Label Text="Healthy World"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="Black" />
+
+            <!-- Email Entry -->
+            <Border Stroke="LightGray"  StrokeThickness="3" StrokeShape="RoundRectangle 8">
+                <HorizontalStackLayout   HorizontalOptions="Fill">
+                    <!-- Your Icon -->
+                    <Image Source="user_icon.png"  
+                           WidthRequest="24" 
+                           HeightRequest="24" 
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Margin="5,0"/>
+           
+                    <!-- The Entry Control -->
+                    <Entry 
+                        x:Name="UsernameEntry"
+                        ClearButtonVisibility="WhileEditing"
+                        Placeholder="Username or Email"
+                        FontSize="18"
+                        Keyboard="Email"
+                        HorizontalOptions="Fill"
+                        Text="{Binding Username}" />
+
+                   </HorizontalStackLayout>
+                </Border>
+
+            <!-- Password Entry -->
+              <Border Stroke="LightGray"  StrokeThickness="3" StrokeShape="RoundRectangle 8">
+                <HorizontalStackLayout  HorizontalOptions="Fill">
+                    <!-- Your Icon -->
+                    <Image Source="lock_icon.png"  
+                           WidthRequest="24" 
+                           HeightRequest="24" 
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Margin="5,0"/>
+           
+                    <!-- Password Entry -->
+                    <Entry x:Name="PasswordEntry" 
+                         Placeholder="Password" 
+                         IsPassword="True"
+                         FontSize="18" 
+                         HorizontalOptions="Fill" 
+                         Text="{Binding Password}"/>
+
+                    </HorizontalStackLayout>
+                 </Border>
+
+            <!-- Login Button -->
+            <Button Text="Log In" Command="{Binding LoginCommand}" HorizontalOptions="FillAndExpand" >
+           
+                </Button>
+
+            <!-- Forgot Password -->
+            <Button Text="Forgot Password?"
+                   TextColor="{StaticResource Primary}"
+                   Command="{Binding ForgetPasswordCommand}"
+                   BackgroundColor="{StaticResource Secondary}"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="21" />
+
+            <!-- Social Login Section -->
+            <Label Text="Or Log in with"
+                   HorizontalOptions="Center"
+                   TextColor="Gray" />
+
+            <HorizontalStackLayout  HorizontalOptions="Center" VerticalOptions="End">
+                <ImageButton Source="google.png"
+                             HeightRequest="50"
+                             BackgroundColor="Transparent" />
+                <ImageButton Source="fb.png"
+                             HeightRequest="50"
+                             BackgroundColor="Transparent" />
+                <ImageButton Source="apple.png"
+                             HeightRequest="50"
+                             BackgroundColor="Transparent" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

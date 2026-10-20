@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthApp.ListRecords"
+             Title="Records">
+     <ScrollView BackgroundColor="{StaticResource Secondary}" Padding="10">
+  
+        <Frame CornerRadius="15"  >
+             <VerticalStackLayout HorizontalOptions="Start" VerticalOptions="StartAndExpand">
+               <Label Text="{Binding Listlbl}"  FontSize="20"   FontAttributes="Bold" TextColor="Black" VerticalOptions="StartAndExpand"/>
+                       <Grid x:Name="RecordsGrid" Padding="10" RowSpacing="5" ColumnSpacing="5" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                           <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                       </Grid>
+              </VerticalStackLayout>
+         </Frame>
+
+     </ScrollView>
+</ContentPage>

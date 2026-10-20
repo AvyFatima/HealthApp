@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthApp.AppointmentDetail"
+             Title="Appointment Details">
+
+    <ScrollView BackgroundColor="{StaticResource Secondary}" Padding="10">
+
+                     <Grid RowSpacing="5" Padding="10" VerticalOptions="StartAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+    
+                           <!-- Appointment Details -->
+                     
+                       <VerticalStackLayout Grid.Row="0"  HorizontalOptions="Fill">
+                            <Label Text="{Binding AptnDetails}" Padding="0,10,0,0"  FontSize="20"  FontAttributes="Bold" TextColor="Black" />
+
+                           <Label Text="{Binding PatientName}" Padding="0,10,0,10"  FontSize="15" TextColor="Black" />
+
+                            <!-- Separator Line -->
+                        <BoxView  Color="LightGray" HeightRequest="1" HorizontalOptions="Fill" />
+    
+                          
+                            <Label FontSize="15" Padding="0,10,0,0" Text="{Binding AptnDate}"  TextColor="Black" />
+
+                            <Label FontSize="15" Text="{Binding AptnTime}" Padding="0,10,0,0"  TextColor="Black" />
+
+                            <Button IsEnabled="{Binding PatientDetailsBtnEnabled}" Command="{Binding PatientCommand}" FontSize="15" Text="View Patient Details"  HorizontalOptions="EndAndExpand" />
+
+
+                        </VerticalStackLayout>
+                         <VerticalStackLayout Spacing="15" Padding="0,10,0,0" Grid.Row="1">
+                          <!-- Visit Notes -->
+                           <Frame  CornerRadius="15"    BackgroundColor="white">
+                                <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="StartAndExpand">
+                     <Label Text="Visit Notes"  FontSize="20" FontAttributes="Bold" TextColor="Black" />
+                             <Grid x:Name="NotesGrid" Padding="10" RowSpacing="5">
+                            </Grid>
+                              </VerticalStackLayout>
+                          </Frame>
+
+                         
+                         <!-- Reminders -->
+                 <Frame CornerRadius="15"  >
+                     <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="StartAndExpand">
+                        <Label Text="Reminders"  FontSize="20"   FontAttributes="Bold" TextColor="Black" />
+                         <Grid x:Name="RemindersGrid" Padding="10" RowSpacing="5">
+                           
+                         </Grid>
+                         </VerticalStackLayout>
+                    </Frame>
+
+                             </VerticalStackLayout>
+
+                       
+                    </Grid>
+                     </ScrollView>
+</ContentPage>

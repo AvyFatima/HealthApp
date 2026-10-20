@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" width="100%" height="100%">
+  <!-- Definitions for Gradients and Shadows -->
+  <defs>
+    <!-- Background Gradient for Heart (Blue to Green) -->
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0066ff" />
+      <stop offset="45%" stop-color="#00aaff" />
+      <stop offset="65%" stop-color="#33cc33" />
+      <stop offset="100%" stop-color="#99ff33" />
+    </linearGradient>
+
+    <!-- Dark Blue Stethoscope Gradient -->
+    <linearGradient id="stethGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a6c" />
+      <stop offset="100%" stop-color="#0b1b3a" />
+    </linearGradient>
+
+    <!-- Drop Shadow Effect -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="5" stdDeviation="6" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- 1. Pure White Background -->
+  <rect width="1000" height="900" fill="#FFFFFF" />
+
+  <!-- 2. Main Gradient Heart Control Group -->
+  <g filter="url(#dropShadow)">
+    <path d="M 500 830 
+             C 420 750, 120 530, 80 370 
+             C 40 210, 200 90, 360 150 
+             C 430 176, 480 230, 500 250 
+             C 520 230, 570 176, 640 150 
+             C 800 90, 960 210, 920 370 
+             C 880 530, 580 750, 500 830 Z" 
+          fill="url(#heartGradient)" />
+  </g>
+
+  <!-- 3. Stethoscope Tubing and Ear Tubes (Left Side Layer) -->
+  <g stroke="url(#stethGradient)" stroke-linecap="round" fill="none" filter="url(#dropShadow)">
+    <!-- Main thick binaural spring & tube loop -->
+    <path d="M 330 320 C 330 200, 120 200, 120 340 C 120 480, 320 520, 250 630" stroke-width="26" />
+    <path d="M 335 320 C 335 220, 160 220, 160 340 C 160 440, 280 470, 280 570" stroke-width="16" stroke-color="#0e244d" />
+    
+    <!-- Metallic ear tubes -->
+    <path d="M 220 205 C 220 170, 190 170, 180 195" stroke="#d2d7df" stroke-width="12" />
+    <path d="M 270 205 C 270 170, 300 170, 310 195" stroke="#d2d7df" stroke-width="12" />
+  </g>
+
+  <!-- Earpieces -->
+  <circle cx="180" cy="195" r="14" fill="#d2d7df" />
+  <circle cx="310" cy="195" r="14" fill="#d2d7df" />
+
+  <!-- 4. Central Medical Cross -->
+  <g filter="url(#dropShadow)">
+    <path d="M 440 240 L 560 240 
+             L 560 360 L 680 360 
+             L 680 480 L 560 480 
+             L 560 600 L 440 600 
+             L 440 480 L 320 480 
+             L 320 360 L 440 360 Z" 
+          fill="#FFFFFF" />
+  </g>
+
+  <!-- 5. EKG Heartbeat Pulse Line (Right Side Layer) -->
+  <path d="M 670 370 L 690 370 L 705 320 L 720 470 L 738 270 L 755 430 L 770 380 L 785 410 L 800 370 L 890 370" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="12" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#dropShadow)" />
+
+  <!-- 6. Stethoscope Chestpiece / Diaphragm (Bottom Left Layer) -->
+  <g filter="url(#dropShadow)">
+    <!-- Outer Metallic Ring -->
+    <circle cx="350" cy="670" r="65" fill="#1b3b6f" stroke="#d2d7df" stroke-width="8" />
+    <!-- Inner Dark Core -->
+    <circle cx="350" cy="670" r="45" fill="#0b1b3a" />
+    <!-- Center White Target Ring -->
+    <circle cx="350" cy="670" r="28" fill="none" stroke="#FFFFFF" stroke-width="10" />
+    <!-- Connector Base Stem -->
+    <path d="M 280 645 L 305 660" stroke="#d2d7df" stroke-width="18" stroke-linecap="round" />
+  </g>
+</svg>
