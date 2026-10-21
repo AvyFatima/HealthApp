@@ -22,8 +22,6 @@ namespace HealthApp.ViewModel
             _messages = messages ?? throw new ArgumentNullException(nameof(messages));
             LoginCommand = new Command(async () => await LoginAsync());
             ForgetPasswordCommand = new Command(OnForgetPasswordExecuted);
-            Username = "admin";
-            Password = "password";
         }
 
         private string _username ;
